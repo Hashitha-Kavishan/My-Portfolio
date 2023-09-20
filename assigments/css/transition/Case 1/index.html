@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p{
+            margin-left: 40px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5%;
+            color: white;
+            width: 20px;
+            height: 70px;
+            background: purple;
+            transition-property: width;
+            transition-duration: 5s;
+            padding: 0 10px; /* Add some padding for spacing */
+        }
+
+        div:hover {
+            width: 300px;
+        }
+
+        div p {
+            margin: 0; /* Remove default margin for the text */
+        }
+
+        .menu-icon {
+            width: 50px;
+        }
+
+        .hide-menu {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        div:hover .hide-menu {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <p class="hide-menu">Menu one</p>
+        <img class="menu-icon" src="Assessment.png" alt="menu">
+    </div>
+        
+    </div>
+    <br>
+    <div>
+        <p class="hide-menu">Menu two</p>
+        <img class="menu-icon" src="Assessment.png" alt="menu">
+    </div>
+    <br>
+    <div>
+        <p class="hide-menu">Menu three</p>
+        <img class="menu-icon" src="Assessment.png" alt="menu">
+    </div>
+    <br>
+    <div>
+        <p class="hide-menu">Menu four</p>
+        <img class="menu-icon" src="Assessment.png" alt="menu">
+    </div>
+    <br>
+    <div>
+        <p class="hide-menu">Menu five</p>
+        <img class="menu-icon" src="Assessment.png" alt="menu">
+    </div>
+
+</body>
+
+</html>

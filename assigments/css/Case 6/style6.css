@@ -1,0 +1,72 @@
+main {
+    width: 99vw;
+    height: 99vh;
+    border: 2px solid rgba(255, 196, 0, 0.04);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /*gap: 9px;*/
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+main > section {
+    /*margin: auto;*/
+    border: 2px solid #101110;
+}
+
+main > section:nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-size:cover ;
+    background-position: center;
+    background-color: #951e9d;
+}
+
+main >section:nth-child(3){
+    grid-row: 4/1;
+    background-position: center;
+    background-color: #09ba67;
+}
+
+main >section:nth-child(2){
+    background-size:cover ;
+    background-position: center;
+    background-color: #f57d07;
+}
+
+main >section:nth-child(4){
+    background-size:cover ;
+    background-position: center;
+    background-color: #d2b523;
+}
+
+main > section:nth-child(5) {
+    background-size: cover;
+    background-position: center;
+    background-color: #00f39e;
+}
+
+main > section:nth-child(6) {
+    background-size: cover;
+    background-position: center;
+    background-color: #0b8f00;
+}
+
+main > section:nth-child(7) {
+    background-size: cover;
+    background-position: center;
+    background-color: #ff00d6;
+}
+
+main > section:nth-child(8) {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    background-size: cover;
+    background-position: center;
+    background-color: #2f0c3f;
+}

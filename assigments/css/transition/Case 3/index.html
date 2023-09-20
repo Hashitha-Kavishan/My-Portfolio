@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Case 3</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        section>div {
+            height: 50vh;
+            width: 35vw;
+            background-image: url("error2.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            box-shadow: 7px 5px 15px 2px;
+        }
+
+        section>div>div {
+            position: absolute;
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            transition: height 0.5s;
+            background: #f3f3f4;
+            opacity: 0.3;
+        }
+
+        section>div:hover>div {
+            height: 100%;
+        }
+
+        section>div:hover>img {
+            height: 20%;
+            top: 20vh;
+        }
+
+        section>div>img {
+            height: 0;
+            position: absolute;
+            top: 0%;
+            transition: top 0.5s ease;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div>
+            <div></div><img src="bin.png" alt="">
+        </div>
+    </section>
+
+</body>
+
+</html>

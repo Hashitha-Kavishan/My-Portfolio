@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 03</title>
+    <link rel="stylesheet" href="Assets\2.jpg">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-block-size: 100vh;
+            inline-size: 100vw;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            font-size: 30px;
+            color: white;
+            font-weight: 500;
+            font-weight: bold;
+        }
+
+        body>div:first-child{
+            position: fixed;
+            inline-size: 18rem;
+            aspect-ratio: 1;
+            border: 1rem solid #ff00b7;
+            border-radius: 50%;
+            box-shadow: 0 0 0 20px hsl(0, 19%, 43%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .abc{
+            block-size: 100vh;
+            display: grid;
+            place-items: center;
+            scroll-snap-align: start;
+        }
+
+        .FCircle{
+            background-color: #339975;
+        }
+
+        .SCircle{
+            background-color: #1c2791;
+        }
+
+        .TCircle{
+            background-color: #f9ff50;
+        }
+
+        section{
+            inline-size: 18rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial;
+        }
+
+    </style>
+
+</head>
+<body>
+<div></div>
+<div class="abc">
+    <section class="FCircle">
+        <p>Hello</p>
+    </section>
+</div>
+
+<div class="abc">
+    <section class="SCircle">
+        <p>Welcome To</p>
+    </section>
+</div>
+<div class="abc">
+    <section class="TCircle">
+        <p>Institute Of Software Engineering</p>
+    </section>
+</div>
+
+
+</body>
+</html>
