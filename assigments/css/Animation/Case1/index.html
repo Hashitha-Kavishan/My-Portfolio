@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div{
+
+            position: relative;
+            width: 110px;
+            height: 60px;
+            background-color: red;
+            border-radius: 20px;
+            left: 0;
+            animation-name: shan;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+
+
+
+        }
+
+        @keyframes  shan {
+            0% {
+
+                left: 0px;
+                background-color: yellow;
+                transform : rotate(360deg);
+            }
+
+            25% {
+
+                left: 1200px;
+                top:0px;
+
+                background-color: orangered;
+            }
+            50%{
+                left: 1200px;
+                top:600px;
+                background-color: #0b8f00;
+
+            }
+
+            75%{
+                top:600px;
+                left: 0px;
+                background-color: #2f0c3f;
+            }
+
+            100%{
+                left: 0px;
+                top:0px;
+            }
+
+
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+<div>
+</div>
+
+</body>
+</html>

@@ -66,6 +66,7 @@ section {
     margin: 0;
 }
 
+
 .logo {
     font-size: 2.8rem;
     color: var(--text-color);
@@ -207,6 +208,7 @@ span {
     font-size: 2.4rem;
     margin: 2rem 0 3rem;
 }
+
 
 .services h2 {
     margin-top: 1rem;
