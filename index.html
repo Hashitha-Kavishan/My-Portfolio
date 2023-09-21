@@ -353,6 +353,35 @@
             color: var(--second-bg-color);
         }
 
+
+        .seemore-button {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .seemore-button a {
+            color: white;
+            border-color: white;
+            border: 2px solid white;
+            padding: 10px 23px;
+            line-height: 1.4;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all .55s ease;
+            text-align: center;
+        }
+
+        .seemore-button a:hover {
+            background: transparent;
+            transform: translateX(2px);
+        }
+
+
         .contact h2 {
             margin-top: 1rem;
             margin-bottom: 3rem;
@@ -621,8 +650,8 @@
 
         .gallerysec h2{
 
-            font-size: 3.6rem;
-            margin-bottom: 3rem;
+            font-size: 6rem;
+            margin-left: 450px;
         }
 
 
@@ -641,8 +670,9 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#services">Gallery</a>
+            <a href="#Gallery">Gallery</a>
             <a href="#projects">Projects</a>
+            <a href="#assignments">Assignments</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -725,6 +755,28 @@
         </section>
 
 
+        <!--        gallery-->
+        <section class="gallerysec" id="Gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-wrap">
+                <i id="backbtn" class="ri-arrow-left-line"></i>
+                <div class="gallery">
+                    <div>
+                        <span><img src="1.png"></span>
+                        <span><img src="2.jpg"></span>
+                        <span><img src="4.jpg"></span>
+                        <span><img src="1.png"></span>
+                        <span><img src="2.jpg"></span>
+                        <span><img src="4.jpg"></span>
+                    </div>
+
+                </div>
+                <i id="nextbtn" class="ri-arrow-right-line"></i>
+            </div>
+        </section>
+
+
+
         <!-- projects section -->
         <section class="projects" id="projects">
             <h2 class="heading">Latest <span>Projects</span></h2>
@@ -783,25 +835,77 @@
             </div>
         </section>
 
-<!--        gallery-->
-        <section class="gallerysec">
-            <h2>Gallery</h2>
-            <div class="gallery-wrap">
-                <i id="backbtn" class="ri-arrow-left-line"></i>
-                <div class="gallery">
-                    <div>
-                        <span><img src="1.png"></span>
-                        <span><img src="2.jpg"></span>
-                        <span><img src="4.jpg"></span>
-                        <span><img src="1.png"></span>
-                        <span><img src="2.jpg"></span>
-                        <span><img src="4.jpg"></span>
-                    </div>
 
+<!--        Assignments-->
+
+        <section class="assignment" id="assignments">
+            <h2 class="heading">Assignment<span>s</span></h2>
+
+            <div class="projects-container">
+                <div class="projects-box">
+                    <img src="error2.png" alt="">
+                    <div class="projects-layer">
+                        <h4>Assignment 01</h4>
+                        <a href="assigments/css/Case%201/index.html" target="_blank"></a>
+
+                    </div>
                 </div>
-                <i id="nextbtn" class="ri-arrow-right-line"></i>
+
+                <div class="projects-box">
+                    <img src="error2.png" alt="">
+                    <div class="projects-layer">
+                        <h4>Assignment 02</h4>
+                        <a href="assigments/css/Case%202/index.html" target="_blank"></a>
+
+                    </div>
+                </div>
+
+                <div class="projects-box">
+                    <img src="error2.png" alt="">
+                    <div class="projects-layer">
+                        <h4>Assignment 03</h4>
+                        <a href="assigments/css/Case%203/index.html" target="_blank"></a>
+
+                        </div>
+                </div>
+
+                <div class="projects-box">
+                    <img src="error2.png" alt="">
+                    <div class="projects-layer">
+                        <h4>Assignment 04</h4>
+                        <a href="assigments/css/Case%204/index.html" target="_blank"></a>
+
+                    </div>
+                </div>
+
+                <div class="projects-box">
+                    <img src="error2.png" alt="">
+                    <div class="projects-layer">
+                        <h4>Assignment 05</h4>
+                        <a href="assigments/css/Case%205/index.html" target="_blank"></a>
+
+                    </div>
+                </div>
+
+                <div class="projects-box">
+                    <img src="error2.png" alt="">
+                    <div class="projects-layer">
+                        <h4>Assignment 06</h4>
+                        <a href="assigments/css/Case%206/index.html" target="_blank"></a>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="seemore-button">
+                <a href="">see more</a>
+
             </div>
         </section>
+
+
 
 
         <!-- contact section -->
@@ -825,7 +929,7 @@
         <!-- footer Design  -->
         <footer class="footer">
             <div class="footer-text">
-                <p>Copyright &copy; 2023 by Hashitha K. | All RIght Reserved.</p>
+                <p>Copyright &copy; 2023 by Hashitha Kavishan. | All RIght Reserved.</p>
             </div>
 
             <div class="footer-iconTop">
@@ -834,13 +938,8 @@
         </footer>
 
     </main>
-    
 
-    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <script src="script.js"></script>
 
 </body>
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Case 3</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+    <link type="favicon" href="assets/images/instagram.png" rel="icon">
+    <style>
+        main{
+            position: absolute;
+            width: 1580px;
+            height: 880px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        section{
+            height: 100%;
+            width: 400%;
+            display: flex;
+            animation-name: slider-animation;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            /*animation-direction: alternate;*/
+        }
+
+        div{
+            height: 100%;
+            width: 100%;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+        @keyframes slider-animation {
+            0%, 15% {
+                transform: translateX(0);
+            }
+            25%, 40% {
+                transform: translateX(-25%);
+            }
+            50%, 65% {
+                transform: translateX(-50%);
+            }
+            75%, 90% {
+                transform: translateX(-75%);
+            }
+
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div>
+            <img src="4.jpg" alt="1">
+        </div>
+        <div>
+            <img src="error2.png" alt="1">
+        </div>
+        <div>
+            <img src="error1.png" alt="1">
+        </div>
+        <div>
+            <img src="error2.png" alt="1">
+        </div>
+    </section>
+</main>
+</body>
+</html>

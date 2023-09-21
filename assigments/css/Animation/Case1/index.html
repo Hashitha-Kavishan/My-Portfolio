@@ -15,7 +15,7 @@
             left: 0;
             animation-name: shan;
             animation-duration: 5s;
-            animation-iteration-count: 2;
+            animation-iteration-count: 100;
             animation-direction: alternate;
 
 
@@ -27,20 +27,21 @@
 
                 left: 0px;
                 background-color: yellow;
-                transform : rotate(360deg);
+                transform : rotate(0deg);
             }
 
             25% {
 
                 left: 1200px;
                 top:0px;
-
                 background-color: orangered;
+                transform : rotate(180deg);
             }
             50%{
                 left: 1200px;
                 top:600px;
                 background-color: #0b8f00;
+                transform : rotate(360deg);
 
             }
 
@@ -48,11 +49,13 @@
                 top:600px;
                 left: 0px;
                 background-color: #2f0c3f;
+                transform : rotate(0deg);
             }
 
             100%{
                 left: 0px;
                 top:0px;
+                transform : rotate(360deg);
             }
 
 
