@@ -169,7 +169,7 @@ section {
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.9rem;
-    color: var(--second-bg-color);
+    color: white;
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
@@ -321,16 +321,9 @@ section {
     text-align: left;
 }
 
-
-
-
-
-
-
-
-
-
-
+.project a{
+    transition: .5s ease;
+}
 
 
 
@@ -445,48 +438,48 @@ section {
 }
 
 
-.contact h2 {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-}
+/*.contact h2 {*/
+/*    margin-top: 1rem;*/
+/*    margin-bottom: 3rem;*/
+/*}*/
 
-.contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-}
+/*.contact form {*/
+/*    max-width: 70rem;*/
+/*    margin: 1rem auto;*/
+/*    text-align: center;*/
+/*    margin-top: 10rem;*/
+/*    margin-bottom: 3rem;*/
+/*}*/
 
-.contact form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+/*.contact form .input-box {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    flex-wrap: wrap;*/
+/*}*/
 
-.contact form .input-box input,
-.contact form textarea {
-    width: 100%;
-    padding: 2.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--second-bg-color);
-    border-radius: .8rem;
-    margin: .7rem 0;
-}
+/*.contact form .input-box input,*/
+/*.contact form textarea {*/
+/*    width: 100%;*/
+/*    padding: 2.5rem;*/
+/*    font-size: 1.6rem;*/
+/*    color: var(--text-color);*/
+/*    background: var(--second-bg-color);*/
+/*    border-radius: .8rem;*/
+/*    margin: .7rem 0;*/
+/*}*/
 
-.contact form .input-box input {
-    width: 49%;
-}
+/*.contact form .input-box input {*/
+/*    width: 49%;*/
+/*}*/
 
-.contact form textarea {
-    resize: none;
-}
+/*.contact form textarea {*/
+/*    resize: none;*/
+/*}*/
 
-.contact form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
-}
+/*.contact form .btn {*/
+/*    margin-top: 2rem;*/
+/*    cursor: pointer;*/
+/*}*/
 
 .footer {
     display: flex;
@@ -662,11 +655,61 @@ section {
 }
 
 .download-cv{
+    color: white;
     position: absolute;
-    margin-left: 20px;
+    margin-left: -115px;
     margin-top: -20px;
 
 }
+
+.play{
+    width: 130px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: -40px;
+    left: 200px;
+    overflow: hidden;
+}
+.play-btn{
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.play-watch {
+    width: 54px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 5px;
+    left: 62px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 17px;
+    opacity: 1;
+    text-align: left;
+}
+.play-intro {
+    width: 68px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 26px;
+    left: 62px;
+    font-family: Inter;
+    font-size: 13px;
+    opacity: 1;
+    text-align: left;
+}
+
 
 
 .gallery div {
