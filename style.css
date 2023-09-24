@@ -212,45 +212,124 @@ section {
 }
 
 
+.project h2 {
+    margin-top: -65px;
+    margin-left: 1rem;
+
+}
+
+
+
 .project{
     background: var(--second-bg-color);
+
 }
 
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(1, 3fr);
-    align-items: center;
-    gap: 2.5rem;
-}
 
-.project-container .project-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+
+.project-container{
+    width: 1080px;
+    height: 584px;
+    background-repeat: no-repeat;
+    margin-top: 17px;
+    margin-left: 100px;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
     overflow: hidden;
-    display: flex;
-    background: rgba(93, 93, 196, 0.21);
+}
+.project-class{
+
+    width: 880px;
+    height: 384px;
+    background: rgba(25,20,42,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid rgba(255,255,255,1);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    overflow: hidden;
+}
+.project-see-more-button{
+    width: 86px;
+    height: 31px;
+    background: rgba(236,24,57,1);
+    opacity: 1;
+    position: absolute;
+    top: 303px;
+    left: 132px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+}
+.project-see-more {
+    width: 65px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 309px;
+    left: 142px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 14px;
+    opacity: 1;
+    text-align: center;
+}
+.project-box{
+    width: 436px;
+    height: 288px;
+    background: url("error2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 52px;
+    left: 406px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    overflow: hidden;
+}
+.project-name{
+    width: 332px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 50px;
+    left: 26px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 25px;
+    opacity: 1;
+    text-align: center;
+}
+.project-content {
+    width: 321px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 130px;
+    left: 27px;
+    font-family: Inter;
+    font-size: 13px;
+    opacity: 1;
+    text-align: left;
 }
 
-.project-box img {
-    width: 50%;
-    height: 50%;
-    transition: .5s ease;
-}
-.project-box:hover img {
-    transform: scale(1.1);
-}
 
-.project h4{
-    font-size: 30px;
-    margin-left: 8rem;
-}
 
-.project h2{
-    margin-top: 200px;
-    margin-left: 8rem;
 
-}
+
+
+
+
+
+
 
 
 
@@ -357,6 +436,7 @@ section {
     border-radius: 5px;
     transition: all .55s ease;
     text-align: center;
+
 }
 
 .seemore-button a:hover {
