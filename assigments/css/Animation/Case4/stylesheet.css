@@ -1,0 +1,128 @@
+main {
+    position: absolute;
+    width: 1600px;
+    height: 730px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("sky.jpg") center;
+    margin: auto;
+    border-radius: 2px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+body{
+    overflow: hidden;
+}
+
+main > section:nth-child(1) > img:nth-child(2) {
+
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    margin-top: 412px;
+    margin-left: 599px;
+    z-index: 100;
+    animation-name: wheel1;
+    animation: wheel1 1ms infinite;
+
+}
+
+@keyframes wheel1 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main > section:nth-child(1) > img:nth-child(3) {
+
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    margin-top: 412px;
+    margin-left: 882px;
+    z-index: 100;
+    animation-name: wheel1;
+    animation: wheel1 1ms infinite;
+}
+
+main > section:nth-child(1) > img:nth-child(1) {
+    padding-left: 10%;
+    position: absolute;
+    width: 465px;
+    height: 200px;
+    left: 0;
+    right: 0;
+    z-index: 25;
+    margin-left: 25%;
+    margin-top: 19%;
+}
+
+main>section:nth-child(2){
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation-name: carAni;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes carAni {
+    0% {
+        transform: translate(0)
+    }
+    25% {
+        transform: translate(-25%)
+    }
+    75% {
+        transform: translate(-50%)
+    }
+    100% {
+        transform: translate(-75%)
+    }
+}
+
+main>section:nth-child(2)>div{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+main>section:nth-child(2)>div:nth-child(1){
+    top: 380px;
+    height: 350px;
+    background: url("road.jpg") center;
+    background-size: cover;
+}
+
+main>section:nth-child(2)>div:nth-child(5){
+    top: 380px;
+    height: 350px;
+    background: url("road.jpg") center;
+    background-size: cover;
+}
+
+main>section:nth-child(2)>div:nth-child(2){
+    top: 182px;
+    height: 200px;
+    z-index: 20;
+    background: url("city.png") center;
+}
+
+main>section:nth-child(2)>div:nth-child(3){
+    top: 182px;
+    height: 200px;
+    z-index: 20;
+    background: url("city.png") center;
+}
+
+main>section:nth-child(2)>div:nth-child(4){
+    top: 182px;
+    height: 200px;
+    z-index: 20;
+    background: url("city.png") center;
+}
