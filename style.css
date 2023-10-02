@@ -680,7 +680,44 @@ section {
     }
 }
 
-@media (max-width: 365px) {
+@media all{
+    .project-phone{
+        display: none;
+    }
+}
+
+@media all {
+    .proj-4{
+        display: none;
+    }
+}
+
+@media all {
+    .contact-heading-phone{
+        display: none;
+    }
+
+}
+@media (max-width: 320px) {
+
+    .play{
+        margin-left: 60px;
+    }
+
+    .down-btn{
+        margin-left: 110px;
+
+    }
+    .project{
+        display: none;
+    }
+
+    .project-phone{
+
+        display: inline;
+    }
+
+
     .home-img img {
         width: 90vw;
         margin-top: 19rem;
@@ -688,6 +725,76 @@ section {
 
     .about-img img {
         width: 90vw;
+    }
+
+
+    .gallerysec h2{
+       margin-left: 63px;
+    }
+
+
+    .assignment h2{
+        font-size: 45px;
+    }
+
+    .assignment .projects-container div:nth-child(6){
+        display: none;
+
+    }
+
+    .assignment .projects-container div:nth-child(5){
+        display: none;
+
+    }
+    .assignment .projects-container div:nth-child(4){
+        display: none;
+
+    }
+
+
+    .project-class{
+
+      display: none;
+    }
+    .project-name{
+        display: none;
+    }
+    .project-content{
+        display: none;
+    }
+    .project-box{
+        display: none;
+    }
+
+    .contact .heading{
+        display: none;
+    }
+    .contact-heading-phone{
+        display: inline;
+        position: absolute;
+        font-size: 35px;
+        top: 4518px;
+        left: 87px;
+
+    }
+
+    .contact-description{
+        display: none;
+
+    }
+    .contact .phone-icon{
+        display: none;
+    }
+    .contact .email-icon{
+        display: none;
+    }
+
+    .contact .location-icon{
+        display: none;
+    }
+
+    .contact form{
+        margin-left: 10px;
     }
 
     .footer-section {
@@ -699,6 +806,231 @@ section {
         margin-top: 1rem;
     }
 }
+
+@media (max-width: 375px) {
+
+    .play{
+        margin-left: 60px;
+    }
+
+    .down-btn{
+        margin-left: 110px;
+
+    }
+
+    .about-content h2{
+        margin-left: 52px;
+    }
+
+    .projects-box {
+        position: relative;
+        width: 300px;
+        margin-left: 32px;
+
+    }
+    .project{
+        display: none;
+    }
+
+    .project-phone{
+
+        display: inline;
+    }
+
+
+    .home-img img {
+        width: 90vw;
+        margin-top: 19rem;
+    }
+
+    .about-img img {
+        width: 90vw;
+    }
+
+
+    .gallerysec h2{
+        margin-left: 63px;
+    }
+    .project-class{
+
+        display: none;
+    }
+    .project-name{
+        display: none;
+    }
+    .project-content{
+        display: none;
+    }
+    .project-box{
+        display: none;
+    }
+
+    .contact .heading{
+        display: none;
+    }
+    .contact-heading-phone{
+        display: inline;
+        position: absolute;
+        font-size: 35px;
+        top: 4518px;
+        left: 87px;
+
+    }
+
+    .contact-description{
+        display: none;
+
+    }
+    .contact .phone-icon{
+        display: none;
+    }
+    .contact .email-icon{
+        display: none;
+    }
+
+    .contact .location-icon{
+        display: none;
+    }
+
+    .contact form{
+        margin-left: 10px;
+    }
+
+    .footer-section {
+        flex-direction: column-reverse;
+    }
+
+    .footer-section p {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+
+@media (max-width: 425px) {
+
+    .project{
+        display: none;
+    }
+
+
+    .play {
+        margin-left: 137px;
+    }
+    .down-btn{
+        margin-left: 150px;
+    }
+
+    .proj-4-sec{
+        position: absolute;
+        font-size: 40px;
+        top: 1900px;
+        left: 60px;
+    }
+
+    .proj-4 {
+        display: inline;
+        width: 342px;
+        height: 159px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 2079px;
+        left: 38px;
+        overflow: hidden;
+    }
+    .proj-4 .p1 {
+        display: inline;
+        width: 342px;
+        height: 159px;
+        background: rgba(42,35,68,1);
+        opacity: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border: 1px solid rgba(255,255,255,1);
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        overflow: hidden;
+    }
+    .proj-4 .p2{
+        display: inline;
+        width: 33px;
+        height: 11px;
+        background: rgba(236,24,57,1);
+        opacity: 1;
+        position: absolute;
+        top: 135px;
+        left: 51px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        overflow: hidden;
+    }
+    .proj-4 .p3 {
+        display: inline;
+        width: 23px;
+        color: rgba(255,255,255,1);
+        position: absolute;
+        top: 137px;
+        left: 55px;
+        font-family: Inter;
+        font-size: 5px;
+        opacity: 1;
+        text-align: left;
+    }
+    .proj-4 .p4 {
+        display: inline;
+        width: 169px;
+        height: 123px;
+        background: url("error2.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 19px;
+        left: 158px;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        overflow: hidden;
+    }
+    .proj-4 .p5{
+        display: inline;
+        width: 133px;
+        color: rgba(255,255,255,1);
+        position: absolute;
+        top: 19px;
+        left: 16px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 10px;
+        opacity: 1;
+        text-align: center;
+    }
+    .proj-4 .p6 {
+        display: inline;
+        width: 135px;
+        color: rgba(255,255,255,1);
+        position: absolute;
+        top: 42px;
+        left: 17px;
+        font-family: Inter;
+        font-size: 7px;
+        opacity: 1;
+        text-align: left;
+    }
+
+}
+
+
 
 .social_icons{
     position: absolute;
