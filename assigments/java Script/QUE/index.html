@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section>div{
+            width: 200px;
+            height: 50px;
+            border: 2px solid black;
+        }
+        section>div:nth-child(2){
+            width: 200px;
+            height: 50px;
+            top: 10px;
+            margin-left: 202px;
+        }
+        section>div:nth-child(3){
+            width: 200px;
+            height: 50px;
+            margin-top: -54px;
+            margin-left: 400px;
+        }
+        section>div:nth-child(4){
+            width: 200px;
+            height: 50px;
+            margin-top: -54px;
+            margin-left: 600px;
+        }
+        section>div:nth-child(5){
+            width: 200px;
+            height: 50px;
+            margin-top: -54px;
+            margin-left: 800px;
+        }
+        section>div:nth-child(6){
+            width: 200px;
+            height: 50px;
+            margin-top: 0px;
+            margin-left: 1002px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+
+<script>
+   let colors = ["green","red","yellow","blue","gray","blueviolet"];
+
+   let divs = document.querySelectorAll("section>div");
+
+   setInterval(
+       function (){
+           var lastCol=colors.pop();
+           colors.unshift(lastCol);
+
+           for(let i in colors){
+               divs[i].style.background=colors[i];
+           }
+       },500
+   )
+
+  // for (let i =0; i< colors.length; i++){
+  //     divs[i].style.background=colors[i];
+  // }
+</script>
+
+</body>
+</html>

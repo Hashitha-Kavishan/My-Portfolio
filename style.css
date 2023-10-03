@@ -690,7 +690,18 @@ section {
     .proj-4{
         display: none;
     }
+    .proj-4-sec{
+        display: none;
+    }
 }
+
+@media all {
+    .proj-4-heading{
+        display: none;
+    }
+}
+
+
 
 @media all {
     .contact-heading-phone{
