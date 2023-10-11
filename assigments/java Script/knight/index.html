@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id='kitt'>
+    <div class='one'></div>
+    <div class='two'></div>
+    <div class='three'></div>
+    <div class='four'></div>
+    <div class='five'></div>
+    <div class='six'></div>
+    <div class='seven'></div>
+    <div class='eight'></div>
+    <div class='nine'></div>
+    <div class='ten'></div>
+</div>
+
+<button id="startBtn">Start</button>
+<button id="stopBtn">Stop</button>
+
+<audio id="themeAudio" loop>
+    <source src="theme.mp3" type='audio/mpeg; codecs="mp3"'>
+    <source src='theme.mp3' type='audio/ogg; codecs="vorbis"'>
+</audio>
+
+<script>
+    const startButton = document.getElementById("startBtn");
+    const stopButton = document.getElementById("stopBtn");
+    const kittAnimation = document.getElementById("kitt");
+    const themeAudio = document.getElementById("themeAudio");
+
+    startButton.addEventListener("click", () => {
+        kittAnimation.style.animationPlayState = "running";
+        themeAudio.play();
+    });
+
+    stopButton.addEventListener("click", () => {
+        kittAnimation.style.animationPlayState = "paused";
+        themeAudio.pause();
+    });
+</script>
+</body>
+</html>

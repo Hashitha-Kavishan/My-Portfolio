@@ -1,0 +1,156 @@
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#kitt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1240px;
+    height: 100px;
+    margin: -75px 0 0 -620px;
+}
+button{
+    margin: 20px;
+    width: 80px;
+    height: 50px;
+    border: none;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+button:hover{
+    box-shadow: 1px 1px 4px 0px black;
+    background: #8e0404;
+    color: white;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten {
+    width: 120px;
+    height: 80px;
+    background: #ea0202;
+    margin: 0;
+    display: inline-block;
+    box-shadow: 0 0 30px #ee0808, inset 0 0 5px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.one {
+    -webkit-animation-name: first;
+    animation-name: first;
+}
+.two {
+    -webkit-animation-name: second;
+    animation-name: second;
+}
+.three {
+    -webkit-animation-name: third;
+    animation-name: third;
+}
+.four {
+    -webkit-animation-name: fourth;
+    animation-name: fourth;
+}
+.five {
+    -webkit-animation-name: fifth;
+    animation-name: fifth;
+}
+.six {
+    -webkit-animation-name: sixth;
+    animation-name: sixth;
+}
+.seven {
+    -webkit-animation-name: seventh;
+    animation-name: seventh;
+}
+.eight {
+    -webkit-animation-name: eighth;
+    animation-name: eighth;
+}
+.nine {
+    -webkit-animation-name: ninth;
+    animation-name: ninth;
+}
+.ten {
+    -webkit-animation-name: tenth;
+    animation-name: tenth;
+}
+
+@keyframes first {
+    0%   { opacity: 0.2; }
+    10%  { opacity: 1; }
+    20%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes second {
+    0%   { opacity: 0; }
+    10%   { opacity: 0.2; }
+    20%  { opacity: 1; }
+    30%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes third {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.2; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes fourth {
+    0%   { opacity: 0; }
+    30%  { opacity: 0.2; }
+    40%  { opacity: 1; }
+    50%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes fifth {
+    0%   { opacity: 0; }
+    40%  { opacity: 0.2; }
+    50%  { opacity: 1; }
+    60%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes sixth {
+    0%   { opacity: 0; }
+    50%  { opacity: 0.2; }
+    60%  { opacity: 1; }
+    70%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes seventh {
+    0%   { opacity: 0; }
+    60%  { opacity: 0.2; }
+    70%  { opacity: 1; }
+    80%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes eighth {
+    0%   { opacity: 0; }
+    70%  { opacity: 0.2; }
+    80%  { opacity: 1; }
+    90%  { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+@keyframes ninth {
+    0%   { opacity: 0; }
+    80%  { opacity: 0.2; }
+    90%  { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+@keyframes tenth {
+    0%   { opacity: 0; }
+    90%  { opacity: 0.2; }
+    100%  { opacity: 1; }
+}
+
+#startBtn, #stopBtn {
+    margin-top: 20px;
+}

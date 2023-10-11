@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/css/all.min.css">
 
+
     <style>
         .count{
             margin-top: 50px;
@@ -26,7 +27,22 @@
             color: #b80000;
         }
 
+        .table>:not(caption)>*>* {
+            padding: 0.5rem 0.5rem;
+            background-color: #0a212d;
+            border-bottom-width: 1px;
+            box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+        }
+        .table-info {
 
+            color: #ffffff;
+            text-align: center;
+
+        }
+        .table {
+            --bs-table-color: #fafdff;
+            text-align: center;
+        }
 
     </style>
 
@@ -37,10 +53,10 @@
 <body style="background: rgb(237,243,242)">
 
 <!--Navigation Bar-->
-<nav class="navbar navbar-expand-lg shadow p-3 mb-5" style="background-color: #55c1ff">
+<nav class="navbar navbar-expand-lg shadow p-3 mb-5" style="background-color: #0a212d">
     <div class="container-fluid">
         
-        <a class="navbar-brand" href="#">POS System</a>
+        <a class="navbar-brand" href="#" style="color:white;">POS System</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,16 +65,16 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" id="btnHome" href="#">Home</a>
+                    <a class="nav-link" id="btnHome" href="#" style="color: white">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="btnItems">Items</a>
+                    <a class="nav-link" href="#" id="btnItems" style="color: white">Items</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="btnCusotmer">Customers</a>
+                    <a class="nav-link" href="#" id="btnCusotmer" style="color: white">Customers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-bg-success border-0 rounded-2" href="#" id="btnOrder">Place Order</a>
+                    <a class="nav-link text-bg-success border-0 rounded-2" href="#" id="btnOrder" >Place Order</a>
                 </li>
             </ul>
         </div>
@@ -71,32 +87,32 @@
     <section>
         <div class="mx-auto container text-center" style="margin: 0">
             <div class="d-inline-flex row count">
-                <div class="shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #053260">
+                <div class="shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #e8b918">
                     <div>
-                        <h2 class="text-light fs-1 fw-bold">
+                        <h2 class="text-dark fs-1 fw-bold" style="color:black">
                             Items <br>
-                            <h2 id="cdItemsCount" class="fw-semibold text-muted">0</h2>
+                            <h2 id="cdItemsCount" class="text-light" style="color: white">0</h2>
                         </h2>
                     </div>
                     <div>
                         <i class="fa-solid fa-boxes-stacked text-end text-light" style="font-size: 20px"></i>
                     </div>
                 </div>
-                <div class="shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #d698f6">
+                <div class="shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #e8b918">
                     <div>
-                        <h2 class="text-light fs-1 fw-bold">
+                        <h2 class="text-dark fs-1 fw-bold" style="color:black">
                             Customers <br>
-                            <h2 id="cdCustCount" class="fw-semibold text-muted">0</h2>
+                            <h2 id="cdCustCount" class="text-light" style="color: white">0</h2>
                         </h2>
                     </div>
                     <div>
                         <i class="fa-solid fa-users text-light"></i>
                     </div>
                 </div>
-                <div class=" shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #73b87e">
-                    <h2 class="text-light fs-1 fw-bold">
+                <div class=" shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #e8b918">
+                    <h2 class="text-dark fs-1 fw-bold">
                         Orders <br>
-                        <h2 id="cdOrdersCount" class="fw-semibold text-muted">0</h2>
+                        <h2 id="cdOrdersCount" class="text-light" style="color: white">0</h2>
                     </h2>
                     <i class="fa-solid fa-cart-shopping text-light"></i>
                 </div>
@@ -155,10 +171,10 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">Item No</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Qty</th>
-                        <th scope="col">Price</th>
+                        <th id="thItemNo" scope="col">Item No</th>
+                        <th id="thItemN" scope="col">Item Name</th>
+                        <th id="thQty" scope="col">Qty</th>
+                        <th id="thPrice" scope="col">Price</th>
                     </tr>
                     </thead>
                     <tbody id="tblItems">
@@ -217,7 +233,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger" id="btnAddItems" disabled>Add Item</button>
+                    <button type="button" class="btn btn-danger" id="btnAddItems" >Add Item</button>
                 </div>
             </div>
         </div>
@@ -258,7 +274,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger" id="btnItemUpdate" disabled>Update Item</button>
+                    <button type="button" class="btn btn-danger" id="btnItemUpdate" >Update Item</button>
                 </div>
             </div>
         </div>
@@ -319,7 +335,7 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">Customer No</th>
+                        <th id="custName" scope="col">Customer No</th>
                         <th scope="col">Customer Name</th>
                         <th scope="col">Address</th>
                         <th scope="col">Contact</th>
@@ -470,6 +486,62 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="controller/IndexController.js"></script>
+
+<script>
+
+//    let customers = [];
+//
+//    function addCustomer() {
+//        // Get input values
+//        let customerNo = document.getElementById("cNo").value;
+//        let customerName = document.getElementById("cName").value;
+//        let customerAddress = document.getElementById("cAddress").value;
+//        let customerContact = document.getElementById("cContact").value;
+//
+//        // object
+//        let customer = {
+//            customerNo: customerNo,
+//            customerName: customerName,
+//            customerAddress: customerAddress,
+//            customerContact: customerContact
+//        };
+//
+//        customers.push(customer);
+//
+//
+//        document.getElementById("cNo").value = "";
+//        document.getElementById("cName").value = "";
+//        document.getElementById("cAddress").value = "";
+//        document.getElementById("cContact").value = "";
+//
+//        alert("Customer added successfully!");
+//    }
+//
+//    let btnAddCustomer = document.getElementById("btnAddCustomer");
+//    btnAddCustomer.addEventListener("click", addCustomer);
+//
+//    let tr;
+//    btnAddCustomer.addEventListener("click",function (){
+//        for (let i = 0; i < customers.length; i++){
+//            let tr = document.createElement("tr");
+//            let td1 = document.createElement("td");
+//            td1.textContent = customers[i].id;
+//
+//            tr.append(td1);
+//            tBody.append(tr);
+//        }
+//    });
+$("#btn").click(function () {
+
+    let cno = $("#cNo").val();
+    let ccontact = $("#cContact").val();
+    let cname = $("#cName").val();
+    let caddress = $("#cAddress").val();
+
+});
+
+
+</script>
 
 </body>
 </html>
