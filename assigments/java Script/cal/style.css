@@ -1,0 +1,48 @@
+body {
+    background-image: url('asest/back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.calculator {
+    margin: 30px auto;
+    width: 300px;
+    margin-top: 150px;
+    background-color: #efe9e9;
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+#screen {
+    width: 100%;
+    height: 40px;
+    background-color: #0a212d;
+    color: white;
+    font-size: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background-color: #2196F3;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.operator {
+    background-color: #f44336;
+}
