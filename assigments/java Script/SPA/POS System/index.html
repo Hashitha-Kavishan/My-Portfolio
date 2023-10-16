@@ -486,59 +486,8 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="controller/IndexController.js"></script>
-
-<script>
-
-//    let customers = [];
-//
-//    function addCustomer() {
-//        // Get input values
-//        let customerNo = document.getElementById("cNo").value;
-//        let customerName = document.getElementById("cName").value;
-//        let customerAddress = document.getElementById("cAddress").value;
-//        let customerContact = document.getElementById("cContact").value;
-//
-//        // object
-//        let customer = {
-//            customerNo: customerNo,
-//            customerName: customerName,
-//            customerAddress: customerAddress,
-//            customerContact: customerContact
-//        };
-//
-//        customers.push(customer);
-//
-//
-//        document.getElementById("cNo").value = "";
-//        document.getElementById("cName").value = "";
-//        document.getElementById("cAddress").value = "";
-//        document.getElementById("cContact").value = "";
-//
-//        alert("Customer added successfully!");
-//    }
-//
-//    let btnAddCustomer = document.getElementById("btnAddCustomer");
-//    btnAddCustomer.addEventListener("click", addCustomer);
-//
-//    let tr;
-//    btnAddCustomer.addEventListener("click",function (){
-//        for (let i = 0; i < customers.length; i++){
-//            let tr = document.createElement("tr");
-//            let td1 = document.createElement("td");
-//            td1.textContent = customers[i].id;
-//
-//            tr.append(td1);
-//            tBody.append(tr);
-//        }
-//    });
-$("#btn").click(function () {
-
-    let cno = $("#cNo").val();
-    let ccontact = $("#cContact").val();
-    let cname = $("#cName").val();
-    let caddress = $("#cAddress").val();
-
-});
+<script src="controller/itemadd.js"></script>
+<script src="controller/customeradd.js"></script>
 
 
 </script>
