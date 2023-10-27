@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>POS System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/css/all.min.css">
+
+
+    <style>
+        .count{
+            margin-top: 50px;
+            display: flex;
+            width: 70vw;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .col{
+            height: 160px;
+            width: 280px;
+        }
+
+        .control-error{
+            font-size: 13px;
+            color: #b80000;
+        }
+
+        .table>:not(caption)>*>* {
+            padding: 0.5rem 0.5rem;
+            background-color: #203744;
+            border-bottom-width: 1px;
+            box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+        }
+        .table-info {
+
+            color: #ffffff;
+            text-align: center;
+
+        }
+        .table {
+            --bs-table-color: #fafdff;
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+
+
+<body style="background: rgb(237,243,242)">
+
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-lg shadow p-3 mb-5" style="background-color: #0a212d">
+    <div class="container-fluid">
+        
+        <a class="navbar-brand" href="#" style="color:white;">POS System</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" id="btnHome" href="#" style="color: white">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="btnItems" style="color: white">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="btnCusotmer" style="color: white">Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-bg-success border-0 rounded-2" href="#" id="btnOrder" >Place Order</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Dashboard Content Start-->
+<main id="dashboard" class="container-fluid">
+    <!--    Details Cards-->
+    <section>
+        <div class="mx-auto container text-center" style="margin: 0">
+            <div class="d-inline-flex row count">
+                <div class="shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #e8b918">
+                    <div>
+                        <h2 class="text-dark fs-1 fw-bold" style="color:black">
+                            Items <br>
+                            <h2 id="cdItemsCount" class="text-light" style="color: white">0</h2>
+                        </h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-boxes-stacked text-end text-light" style="font-size: 20px"></i>
+                    </div>
+                </div>
+                <div class="shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #e8b918">
+                    <div>
+                        <h2 class="text-dark fs-1 fw-bold" style="color:black">
+                            Customers <br>
+                            <h2 id="cdCustCount" class="text-light" style="color: white">0</h2>
+                        </h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-users text-light"></i>
+                    </div>
+                </div>
+                <div class=" shadow p-3 mb-5 col rounded border border-0 border-dark" style="margin: 10px; background-color: #e8b918">
+                    <h2 class="text-dark fs-1 fw-bold">
+                        Orders <br>
+                        <h2 id="cdOrdersCount" class="text-light" style="color: white">0</h2>
+                    </h2>
+                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    Order History Table-->
+
+    <section class="container-fluid bg-light border-0 rounded-3 shadow-sm pb-5 ">
+        <div class="row">
+            <div class="col mt-5 mb-5 ">
+                <h3>Order History</h3>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="table-info" scope="col">OrderID</th>
+                        <th class="table-info" scope="col">ItemQty</th>
+                        <th class="table-info" scope="col">BillValue</th>
+                        <th class="table-info" scope="col">Customer</th>
+                        <th class="table-info" scope="col">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblOrderHistory">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </section>
+
+
+</main>
+<!--Dashboard Content End-->
+
+<!--Items Content Start-->
+<main id="items" style="display: none" class="container-fluid ">
+    <section class="container-fluid row mt-4 ms-0 me-0">
+        <div class="row bg-white border rounded ms-0 me-0 shadow-sm" >
+
+            <div class="col-12 d-flex justify-content-between mt-3">
+                <h1 class="text-muted">Items</h1>
+            </div>
+
+            <div class="col-12">
+                <hr>
+                <div class="d-flex mb-4 justify-content-between" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th id="thItemNo" scope="col">Item No</th>
+                        <th id="thItemN" scope="col">Item Name</th>
+                        <th id="thQty" scope="col">Qty</th>
+                        <th id="thPrice" scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblItems">
+                    </tr>
+                    </tbody>
+                </table>
+                <hr>
+            </div>
+
+            <!--  Button-->
+            <div class="modal-footer col-12 mb-3">
+
+                <button class="btn btn-success me-1" type="button" data-bs-toggle="modal" data-bs-target="#addItemModal"><i class="fa-solid fa-plus"></i> Add</button>
+
+                <button class="btn btn-warning me-1" type="button" data-bs-toggle="modal" data-bs-target="#updateItemModal">Update</button>
+
+                <button class="btn btn-danger me-1" type="button" data-bs-toggle="modal" data-bs-target="#deleteItemModal">Delete</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Add Item MODAL-->
+    <div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addItemModalLabel">Add an Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="item-no" class="col-form-label">Item No:</label>
+                                <input type="text" class="form-control" id="item-no">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="item-name" class="col-form-label">Item Name:</label>
+                                <input type="text" class="form-control" id="item-name">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="qty" class="col-form-label">QTY:</label>
+                            <input type="text" class="form-control" id="qty">
+                            <span class="control-error"></span>
+                        </div>
+                        <div>
+                            <label for="price" class="col-form-label">Price:</label>
+                            <input type="text" class="form-control" id="price">
+                            <span class="control-error"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="btnAddItems" >Add Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Update Item MODAL-->
+    <div class="modal fade" id="updateItemModal" tabindex="-1" aria-labelledby="updateItemModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateItemModalLabel">Update an Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="uitem-no" class="col-form-label">Item No:</label>
+                                <select type="text" class="form-control"  id="uitem-no"></select>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="uitem-name" class="col-form-label">Item Name:</label>
+                                <input type="text" class="form-control" placeholder="Cake" id="uitem-name">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="uqty" class="col-form-label">QTY:</label>
+                            <input type="text" class="form-control" placeholder="100" id="uqty">
+                            <span class="control-error"></span>
+                        </div>
+                        <div>
+                            <label for="uprice" class="col-form-label">Price:</label>
+                            <input type="text" placeholder="RS123.00" class="form-control" id="uprice">
+                            <span class="control-error"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="btnItemUpdate" >Update Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Delete Item MODAL-->
+    <div class="modal fade" id="deleteItemModal" tabindex="-1" aria-labelledby="deleteItemModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteItemModalLabel">Delete an Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="ditem-no" class="col-form-label">Item No:</label>
+                                <select type="text" class="form-control" id="ditem-no"></select>
+                            </div>
+                            <div class="mb-3 col">                                <fieldset disabled>
+                                    <label for="ditem-name" class="col-form-label">Item Name:</label>
+                                    <input type="text" class="form-control" id="ditem-name" disabled>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="btnItemDelete">Delete Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!--Items Content End-->
+
+<!--Customer Content Start-->
+<main id="customer" style="display: none" class="container-fluid">
+    <section class="container-fluid row mt-4 ms-0 me-0">
+        <div class="row bg-white border rounded ms-0 me-0 shadow-sm">
+
+            <div class="col-12 d-flex justify-content-between mt-3">
+                <h1 class="text-muted">Customers</h1>
+            </div>
+
+            <div class="col-12">
+                <hr>
+                <div class="d-flex mb-4 justify-content-between" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th id="custName" scope="col">Customer No</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Contact</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblCustomer">
+
+                    </tbody>
+                </table>
+                <hr>
+            </div>
+
+            <!--  Button-->
+            <div class="modal-footer col-12 mb-3">
+
+                <button class="btn btn-success me-1" type="button" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa-solid fa-plus"></i> Add</button>
+
+                <button class="btn btn-warning me-1" type="button" data-bs-toggle="modal" data-bs-target="#updateModal" id="btnCusUpdate">Update</button>
+
+                <button class="btn btn-danger me-1" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Add Customer MODAL-->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Add a Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="cNo" class="col-form-label">Customer No:</label>
+                                <input type="text" class="form-control"  id="cNo">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="cContact" class="col-form-label">Contact:</label>
+                                <input type="text" class="form-control" id="cContact">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="cName" class="col-form-label">Customer Name:</label>
+                            <input type="text" class="form-control" id="cName">
+                            <span class="control-error"></span>
+                        </div>
+                        <div>
+                            <label for="cAddress" class="col-form-label">Adress:</label>
+                            <input type="text" class="form-control" id="cAddress">
+                            <span class="control-error"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="btnAddCustomer">Add Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Update Customer MODAL-->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update a Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="ucust-no" class="col-form-label">Customer No:</label>
+                                <select type="text" class="form-control" id="ucust-no"></select>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="ucust-Contact" class="col-form-label">Contact:</label>
+                                <input type="text" class="form-control" id="ucust-Contact">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="uname" class="col-form-label">Customer Name:</label>
+                            <input type="text" class="form-control"  id="uname">
+                            <span class="control-error"></span>
+                        </div>
+                        <div>
+                            <label for="uaddress" class="col-form-label">Adress:</label>
+                            <input type="text" class="form-control" id="uaddress">
+                            <span class="control-error"></span>
+                        </div>
+                    </form>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="btnCUpdate">Update Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Delete Customer MODAL-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete a Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="dcust-no" class="col-form-label">Item No:</label>
+                                <select type="text" class="form-control"  id="dcust-no"></select>
+                            </div>
+                            <div class="mb-3 col">
+                                <fieldset disabled>
+                                    <label for="dcust-name" class="col-form-label">Customer Name:</label>
+                                    <input type="text" class="form-control" id="dcust-name">
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="btnCusDelete">Delete Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+   <!--Place Order Content Start-->
+<main id="order" style="display: none" class="container-fluid ">
+    <section class="container-fluid row mt-4 ms-0 me-0">
+        <div class="row bg-white border rounded ms-0 me-0 shadow-sm">
+
+            <div class="col-12 d-flex justify-content-between mt-3">
+                <h1 class="text-muted">Place Order</h1>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label class="form-label" for="txtOrderID">OrderID:</label>
+                        <input class="form-control" id="txtOrderID" type="text" placeholder="Order Id" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <hr>
+                <form>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="form-group">
+                                <label class="form-label" for="txtitemID">Item No:</label>
+                                <select  class="form-control" id="txtitemID" type="text"></select>
+
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label class="form-label" for="txtitemName">Item Name:</label>
+                                <input class="form-control" type="text" id="txtitemName" disabled>
+                                <span class="control-error" id="order-item-name"></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-group">
+                                <label class="form-label" for="txtUnitPrice">Unit Price:</label>
+                                <input class="form-control" id="txtUnitPrice" type="text" disabled>
+                                <span class="control-error" id="order-unit-price"></span>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="form-group">
+                                <label class="form-label" for="txtShopQty">QITS:</label>
+                                <input class="form-control" id="txtShopQty" value="0" type="number" disabled>
+                                <span class="control-error" id="order-shop-qty-empty-error"></span>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="form-group">
+                                <label class="form-label" for="txtQty">Qty:</label>
+                                <input class="form-control" id="txtQty" value="1" type="number">
+                                <span class="control-error" id="order-qty-empty-error"></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label class="form-label" for="orderCustomerID">Customer ID</label>
+                                <select class="form-control" id="orderCustomerID" type="text"></select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label" for="orderCustomerName">Name</label>
+                                <input class="form-control" id="orderCustomerName" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label class="form-label" for="orderDate">Date:</label>
+                                <input class="form-control" id="orderDate" type="date">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-12 mt-2">
+                <hr>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Item No</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblCart">
+                    </tbody>
+                </table>
+               
+
+                <hr>
+            </div>
+
+            <!--  Footer-->
+            <div class="modal-footer col-12 mb-3">
+                <div class="col ms-5">
+                    <div class="row">
+                        <h4 class="text-muted" id="lblTotal">Total: 0.00/=</h4>
+                    </div>
+                    <div class="row">
+                        <h3 class="text-danger " id="lblSubTotal">SubTotal: 0.00/=</h3>
+                    </div>
+                    <h3 class="text-success" id="lblBalance">Balance: 0.00/=</h3>
+                </div>
+                <div class="form-group me-4 m-lg-4">
+                    <input class="form-control" type="text" id="txtCash" placeholder="Cash">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="row">
+                    <button class="btn btn-danger btn-lg me-4" id="btnPurchase" disabled>Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+
+
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="controller/IndexController.js"></script>
+<script src="controller/itemadd.js"></script>
+<script src="controller/customeradd.js"></script>
+<script src="controller/PlaceOrderController.js"></script>
+<script src="db/DB.js"></script>
+
+
+</script>
+
+</body>
+</html>

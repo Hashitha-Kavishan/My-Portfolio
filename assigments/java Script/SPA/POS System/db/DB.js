@@ -1,4 +1,0 @@
-
-var items = [];
-
-var customers = [];
