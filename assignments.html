@@ -1,10 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: "Raleway", sans-serif;
+            font-family: "Source Code Pro", monospace;
+        }
+
+        :root {
+            --bg-color: #19142a;
+            --second-bg-color: #2a2344;
+            --text-color: #fff;
+            --main-color: #ec1839;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+
+
+        .nav a:hover,
+        .nav a.active {
+            color: var(--main-color);
+        }
+
+
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        html {
+            font-size: 61%;
+
+        }
+
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 6.5rem;
+        }
+
+
+
+        .project h2 {
+            margin-top: -65px;
+            margin-left: 1rem;
+
+        }
+
+
+        .projects h2 {
+            margin-bottom: 3rem;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .projects-container .projects-box {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem var(--bg-color);
+            overflow: hidden;
+            display: flex;
+        }
+
+
+
+        .projects-box img {
+            width: 100%;
+            height: 100%;
+            transition: .5s ease;
+        }
+
+        .projects-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .projects-box .projects-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+        }
+
+        .projects-box:hover .projects-layer {
+            transform: translateY(0);
+
+        }
+
+        .projects-layer h4 {
+            font-size: 3rem;
+        }
+
+        .projects-layer p {
+            font-size: 2.3rem;
+            margin: 3rem 0 1rem;
+        }
+
+        .projects-layer a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            background: var(--text-color);
+            border-radius: 50%;
+        }
+
+        .projects-layer a i {
+            font-size: 5rem;
+            color: var(--second-bg-color);
+        }
+
+
+
+    </style>
+
 </head>
 <body>
-$END$
+
+
+<section class="assignment" id="assignments">
+    <h2 class="heading">Assignment<span style="color: #EC1839FF">s</span></h2>
+
+    <div class="projects-container">
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 01</h4>
+                <a href="assigments/css/Case%201/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 02</h4>
+                <a href="assigments/css/Case%202/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 03</h4>
+                <a href="assigments/css/Case%203/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 04</h4>
+                <a href="assigments/css/Case%204/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 05</h4>
+                <a href="assigments/css/Case%205/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 06</h4>
+                <a href="assigments/css/Case%206/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 07</h4>
+                <a href="assigments/css/transition/Case%201/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 08</h4>
+                <a href="assigments/css/transition/Case%202/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 09</h4>
+                <a href="assigments/css/transition/Case%203/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 10</h4>
+                <a href="assigments/css/Animation/Case1/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 11</h4>
+                <a href="assigments/css/Animation/Case2/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 12</h4>
+                <a href="assigments/css/Animation/Case3/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 13</h4>
+                <a href="assigments/css/Animation/Case4/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 13</h4>
+                <a href="assigments/css/Animation/Case4/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 14</h4>
+                <a href="assigments/Css_frameWork/POS%20System/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 15</h4>
+                <a href="assigments/java%20Script/cal/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 16</h4>
+                <a href="assigments/java%20Script/knight/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 17</h4>
+                <a href="assigments/java%20Script/QUE/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 18</h4>
+                <a href="assigments/java%20Script/In%20Memory/POS%20System/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <img src="error2.png" alt="">
+            <div class="projects-layer">
+                <h4>Assignment 19</h4>
+                <a href="assigments/java%20Script/SPA/POS%20System/index.html" target="_blank"></a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
 </body>
 </html>

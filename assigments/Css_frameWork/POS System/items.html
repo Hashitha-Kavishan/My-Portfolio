@@ -1,10 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>POS/Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
 </head>
-<body>
-$END$
+<body style="background: rgb(237,243,242)">
+
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-lg shadow p-3 mb-5" style="background-color: #0a212d">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#" style="color: white">POS System</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" id="btnHome" href="index.html" style="color: white">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="items.html" id="btnItems" style="color: white">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="customers.html" id="btnCusotmer" style="color: white">Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-bg-success border-0 rounded-2" href="placeorder.html" id="btnOrder">Place Order</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--main-->
+<main class="container-fluid">
+    <section class="container-fluid row mt-4 ms-0 me-0">
+        <div class="row bg-white border rounded ms-0 me-0 shadow-sm" >
+
+            <div class="col-12 d-flex justify-content-between mt-3">
+                <h1 class="text-muted">Items</h1>
+            </div>
+
+            <div class="col-12">
+                <hr>
+                <div class="d-flex mb-4 justify-content-between" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Item No</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+
+                </table>
+                <hr>
+            </div>
+
+            <!--  Button-->
+            <div class="modal-footer col-12 mb-3">
+
+                <button class="btn btn-success me-1" type="button" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa-solid fa-plus"></i> Add</button>
+
+                <button class="btn btn-warning me-1" type="button" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+
+                <button class="btn btn-danger me-1" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Add Item MODAL-->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Add an Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="item-no" class="col-form-label">Item No:</label>
+                                <input type="text" class="form-control" id="item-no">
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="item-name" class="col-form-label">Item Name:</label>
+                                <input type="text" class="form-control" id="item-name">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="qty" class="col-form-label">QTY:</label>
+                            <input type="text" class="form-control" id="qty">
+                        </div>
+                        <div>
+                            <label for="price" class="col-form-label">Price:</label>
+                            <input type="text" class="form-control" id="price">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Add Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Update Item MODAL-->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update an Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="uitem-no" class="col-form-label">Item No:</label>
+                                <input type="text"  class="form-control" id="uitem-no">
+
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="uitem-name" class="col-form-label">Item Name:</label>
+                                <input type="text" class="form-control" id="uitem-name">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="uqty" class="col-form-label">QTY:</label>
+                            <input type="text" class="form-control" id="uqty">
+                        </div>
+                        <div>
+                            <label for="uprice" class="col-form-label">Price:</label>
+                            <input type="text" class="form-control" id="uprice">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Update Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Delete Item MODAL-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete an Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="ditem-no" class="col-form-label">Item No:</label>
+                                <input type="text" class="form-control" id="ditem-no">
+
+                            </div>
+                            <div class="mb-3 col">
+                                <fieldset disabled>
+                                    <label for="ditem-name" class="col-form-label">Item Name:</label>
+                                    <input type="text" class="form-control" id="ditem-name">
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Delete Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<script src="assets/js/bootstrap.min.js"></script>
+
 </body>
 </html>
