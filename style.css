@@ -716,7 +716,7 @@ section {
     }
 
     .down-btn{
-        margin-left: 110px;
+        margin-left: 111px;
 
     }
     .project{
@@ -830,7 +830,7 @@ section {
     }
 
     .about-content h2{
-        margin-left: 52px;
+        margin-left: 28px;
     }
 
     .projects-box {
@@ -845,7 +845,7 @@ section {
 
     .project-phone{
 
-        display: inline;
+        display: none;
     }
 
 
@@ -926,10 +926,10 @@ section {
 
 
     .play {
-        margin-left: 137px;
+        margin-left: 59px;
     }
     .down-btn{
-        margin-left: 150px;
+        margin-left: 111px;
     }
 
     .proj-4-sec{
@@ -940,7 +940,7 @@ section {
     }
 
     .proj-4 {
-        display: inline;
+        display: flex;
         width: 342px;
         height: 159px;
         background-repeat: no-repeat;
@@ -948,8 +948,8 @@ section {
         background-size: cover;
         opacity: 1;
         position: absolute;
-        top: 2079px;
-        left: 38px;
+        top: 2070px;
+        left: -14px;
         overflow: hidden;
     }
     .proj-4 .p1 {
@@ -1037,6 +1037,18 @@ section {
         font-size: 7px;
         opacity: 1;
         text-align: left;
+    }
+
+    .projects-box img {
+        width: 81%;
+        height: 94%;
+        transition: .5s ease;
+    }
+
+    .contact h2 {
+        display: flex;
+        margin-top: -187rem;
+        margin-bottom: 3rem;
     }
 
 }
