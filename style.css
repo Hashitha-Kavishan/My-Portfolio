@@ -820,6 +820,20 @@ section {
 
 @media (max-width: 375px) {
 
+    .proj-4 {
+        display: flex;
+        width: 342px;
+        height: 159px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 2070px;
+        left: -14px;
+        overflow: hidden;
+    }
+
     .play{
         margin-left: 60px;
     }
@@ -919,6 +933,7 @@ section {
 
 
 @media (max-width: 425px) {
+    
 
     .project{
         display: none;
@@ -933,6 +948,7 @@ section {
     }
 
     .proj-4-sec{
+        display: none;
         position: absolute;
         font-size: 40px;
         top: 1900px;
@@ -940,7 +956,8 @@ section {
     }
 
     .proj-4 {
-        display: flex;
+       
+        display: none;
         width: 342px;
         height: 159px;
         background-repeat: no-repeat;
@@ -953,7 +970,9 @@ section {
         overflow: hidden;
     }
     .proj-4 .p1 {
-        display: inline;
+        
+    
+        display: none;
         width: 342px;
         height: 159px;
         background: rgba(42,35,68,1);
@@ -969,7 +988,9 @@ section {
         overflow: hidden;
     }
     .proj-4 .p2{
-        display: inline;
+        
+        display: none;
+     
         width: 33px;
         height: 11px;
         background: rgba(236,24,57,1);
@@ -984,6 +1005,8 @@ section {
         overflow: hidden;
     }
     .proj-4 .p3 {
+        
+        display: none;
         display: inline;
         width: 23px;
         color: rgba(255,255,255,1);
@@ -996,6 +1019,8 @@ section {
         text-align: left;
     }
     .proj-4 .p4 {
+        
+        display: none;
         display: inline;
         width: 169px;
         height: 123px;
@@ -1014,6 +1039,8 @@ section {
         overflow: hidden;
     }
     .proj-4 .p5{
+        
+        display: none;
         display: inline;
         width: 133px;
         color: rgba(255,255,255,1);
@@ -1027,6 +1054,8 @@ section {
         text-align: center;
     }
     .proj-4 .p6 {
+        
+        display: none;
         display: inline;
         width: 135px;
         color: rgba(255,255,255,1);
