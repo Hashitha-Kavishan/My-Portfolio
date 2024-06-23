@@ -890,6 +890,13 @@ section {
         display: none;
     }
 
+    .contact h2 {
+        display: flex;
+        margin-top: -93rem;
+        margin-left: 0px;
+        margin-bottom: 3rem;
+    }
+
     .contact .heading{
         display: none;
     }
@@ -1061,7 +1068,8 @@ section {
 
     .contact h2 {
         display: flex;
-        margin-top: -187rem;
+        margin-top: -93rem;
+        margin-left: 26px;
         margin-bottom: 3rem;
     }
 
